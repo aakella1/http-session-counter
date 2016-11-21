@@ -3,8 +3,8 @@
 ## Prerequisites
 
 * Java JDK installed with `JAVA_HOME` set and `java` on the $PATH
-* JBoss EAP 6.4.\* 
-* JBoss Data Grid 6.5.\* (server)
+* JBoss EAP 7.\* 
+* JBoss Data Grid 7.\* (server)
 * Firefox or Safari with developer tools to snoop on HTTP traffic
 
 ## Setup 

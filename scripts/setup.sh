@@ -30,7 +30,7 @@ cp -R $JDG_HOME $DG
 cp $PROJECTDIR/config/hssr-clustered.xml $DG/standalone/configuration
 
 echo ">> Starting the JBoss Data Grid Server"
-nohup sh $DG/bin/clustered.sh -c hssr-clustered.xml -Djboss.node.name=jdg > /dev/null 2>&1 &
+nohup sh $DG/bin/standalone.sh -c hssr-clustered.xml -Djboss.node.name=jdg > /dev/null 2>&1 &
 
 echo "*** Sleeping for 15s to let JDG be fully up ***"
 sleep 15s 
@@ -53,7 +53,7 @@ touch $NODE2/standalone/deployments/http-session-counter.war.dodeploy
 
 echo ">> Use the following commands to shutdown the EAP/JDG servers :"
 echo "----------"
-echo "$NODE1/bin/jboss-cli.sh -c --controller=127.0.0.1:9999 --command=shutdown"
-echo "$NODE2/bin/jboss-cli.sh -c --controller=127.0.0.1:10099 --command=shutdown"
-echo "$NODE1/bin/jboss-cli.sh -c --controller=127.0.0.1:10199 --command=shutdown"
+echo "$NODE1/bin/jboss-cli.sh -c --controller=127.0.0.1:9990 --command=shutdown"
+echo "$NODE2/bin/jboss-cli.sh -c --controller=127.0.0.1:10090 --command=shutdown"
+echo "$NODE1/bin/jboss-cli.sh -c --controller=127.0.0.1:10190 --command=shutdown"
 echo "----------"
