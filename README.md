@@ -31,8 +31,8 @@ export JDG_HOME=<path-to-jdg-home-folder>
 ```
 After the script has run successfully, the EAP nodes can be accessed at:
 
-1. Node 1 : http://127.0.0.1:8180/http-session-counter/
-2. Node 2 : http://127.0.0.1:8280/http-session-counter/ 
+1. Node 1 : http://127.0.0.1:8380/http-session-counter/
+2. Node 2 : http://127.0.0.1:8480/http-session-counter/ 
 
 ## Test
 
