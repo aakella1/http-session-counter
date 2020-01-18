@@ -43,3 +43,5 @@ After the script has run successfully, the EAP nodes can be accessed at:
 5. Modify the cURL and point the command to the second EAP host. You will notice that the session continues on second EAP because of session replication. [![](.images/cURL-node2.png)](.images/cURL-node2.png)
 6. Shutdown EAP Node 1 and Node 2 and start both of them back again 
 7. Run the same cURL as in steps 4 and 5. You will notice that the session continues from where it was last left off 
+8. Kill one of the jdg nodes using the command below
+  
