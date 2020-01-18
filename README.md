@@ -3,8 +3,8 @@
 ## Prerequisites
 
 * Java JDK installed with `JAVA_HOME` set and `java` on the $PATH
-* JBoss EAP 7.\* 
-* JBoss Data Grid 7.\* (server)
+* JBoss EAP 7.1 
+* JBoss Data Grid 7.1 (server)
 * Firefox or Safari with developer tools to snoop on HTTP traffic
 
 ## Setup 
@@ -27,7 +27,7 @@ export EAP_HOME=<path-to-eap-home-folder>
 export JDG_HOME=<path-to-jdg-home-folder>
 
 # Run the provided setup script
-. scripts/setup.sh
+./scripts/setup.sh
 ```
 After the script has run successfully, the EAP nodes can be accessed at:
 
