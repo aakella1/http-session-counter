@@ -55,10 +55,13 @@ touch $NODE1/standalone/deployments/http-session-counter.war.dodeploy
 cp $PROJECTDIR/target/http-session-counter.war $NODE2/standalone/deployments/
 touch $NODE2/standalone/deployments/http-session-counter.war.dodeploy
 
-echo ">> Use the following commands to shutdown the EAP/JDG servers :"
+echo ">> Use the following commands to shutdown the JDG servers :"
 echo "----------"
 echo "$NODE1/bin/jboss-cli.sh -c --controller=127.0.0.1:10090 --command=shutdown"
 echo "$NODE2/bin/jboss-cli.sh -c --controller=127.0.0.1:10190 --command=shutdown"
+echo "----------"
+echo ">> Use the following commands to shutdown the EAP servers :"
+echo "----------"
 echo "$NODE2/bin/jboss-cli.sh -c --controller=127.0.0.1:10290 --command=shutdown"
 echo "$NODE1/bin/jboss-cli.sh -c --controller=127.0.0.1:10390 --command=shutdown"
 echo "----------"
