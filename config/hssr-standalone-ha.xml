@@ -462,7 +462,7 @@
             <remote-destination host="localhost" port="25"/>
         </outbound-socket-binding>
         <outbound-socket-binding name="remote-jdg-server">
-            <remote-destination host="127.0.0.1" port="11222"/>
+            <remote-destination host="127.0.0.1" port="11322"/>
         </outbound-socket-binding>
     </socket-binding-group>
 </server>
