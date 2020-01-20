@@ -55,6 +55,17 @@ touch $NODE1/standalone/deployments/http-session-counter.war.dodeploy
 cp $PROJECTDIR/target/http-session-counter.war $NODE2/standalone/deployments/
 touch $NODE2/standalone/deployments/http-session-counter.war.dodeploy
 
+echo ">> Use the following commands to startup the JDG servers :"
+echo "----------"
+nohup sh $DG1/bin/standalone.sh -c hssr-clustered.xml -Djboss.socket.binding.port-offset=100 -Djboss.node.name=jdg1 > /dev/null 2>&1 &
+nohup sh $DG2/bin/standalone.sh -c hssr-clustered.xml -Djboss.socket.binding.port-offset=200 -Djboss.node.name=jdg2 > /dev/null 2>&1 &
+echo "----------"
+echo ">> Use the following commands to startup the EAP servers :"
+echo "----------"
+nohup sh $NODE1/bin/standalone.sh -c hssr-standalone-ha.xml -Djboss.socket.binding.port-offset=300 -Djboss.node.name=node1 > /dev/null 2>&1 &
+nohup sh $NODE2/bin/standalone.sh -c hssr-standalone-ha.xml -Djboss.socket.binding.port-offset=400 -Djboss.node.name=node2 > /dev/null 2>&1 &
+echo "----------"
+
 echo ">> Use the following commands to shutdown the JDG servers :"
 echo "----------"
 echo "$NODE1/bin/jboss-cli.sh -c --controller=127.0.0.1:10090 --command=shutdown"
