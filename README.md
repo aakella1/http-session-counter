@@ -29,6 +29,10 @@ export JDG_HOME=<path-to-jdg-home-folder>
 # Run the provided setup script
 ./scripts/setup.sh
 ```
+THE SCRIPT WILL START TWO EAP AND TWO JDG INSTANCES.
+
+You will see the STARTUP and SHUTDOWN COMMANDS displayed at the prompt. Save the commands as you would use them during our testing.
+
 After the script has run successfully, the EAP nodes can be accessed at:
 
 1. Node 1 : http://127.0.0.1:8380/http-session-counter/
