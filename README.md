@@ -37,11 +37,10 @@ After the script has run successfully, the EAP nodes can be accessed at:
 ## Test
 
 1. Hit the first EAP host URL couple of times via browser [![](.images/http-request-node1.png)](.images/http-request-node1.png)
-2. As shown in the image(s) below navigate to Menu -> Developer -> Network -> Reload [![](.images/developer-tools.png)](.images/developer-tools.png) [![](.images/network.png)](.images/network.png)
-3. As shown in the image below, right click on the **HTTP GET** request and select **Copy as cURL** [![](.images/cURL.png)](.images/cURL.png) 
-4. Open a new shell and run the captured cURL. You will see that the session continues via shell as well [![](.images/cURL-node1.png)](.images/cURL-node1.png)
-5. Modify the cURL and point the command to the second EAP host. You will notice that the session continues on second EAP because of session replication. [![](.images/cURL-node2.png)](.images/cURL-node2.png)
-6. Shutdown EAP Node 1 and Node 2 and start both of them back again 
-7. Run the same cURL as in steps 4 and 5. You will notice that the session continues from where it was last left off 
-8. Kill one of the jdg nodes using the command below
+2. Now, hit the second EAP host URL couple of times via browser
+3. Shutdown EAP Node 1 and Node 2 and start both of them back again. You should notice the counter still intact
+4. Kill one of the jdg nodes. Notice that the second jdg is still maintaining the counter, and incrementing if you hit any of the EAP URLs
+5. Restart the jdg node, you will notice it joins back in the cluster, and the counter still increments
+6. Kill the other jdg node and the hit the EAP URL to notice that the counter is still incrementing
+7. We just externalized cache and made it highly available.
   
